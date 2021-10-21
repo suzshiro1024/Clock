@@ -1,0 +1,50 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+body{margin: 0; padding: 0;}
+
+.background{
+    top: 0;
+    left: 0;
+    width : 100vw;
+    min-height: 100vh;
+    background-color: #070712;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.clock{
+    text-align: center;
+    text-shadow: 0 0 20px #0ae6ab;
+    color: rgb(0, 255, 234);
+    line-height: 1.2;
+    font-family: 'Play', sans-serif;
+}
+
+.time{
+    font-size: 100px;
+}
+
+.date{
+    font-size: 25px;
+}
+
+.place{
+    font-size: 30px;
+}
+
+@media screen and (max-width: 500px){
+    .time{
+        font-size: 20vw;
+    }
+
+    .date{
+        font-size: 5vw;
+    }
+
+    .place{
+        font-size: 3vw;
+    }
+}
