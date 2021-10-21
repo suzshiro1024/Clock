@@ -3,6 +3,7 @@
 
 body{margin: 0; padding: 0;}
 
+/* background style */
 .background{
     top: 0;
     left: 0;
@@ -15,6 +16,7 @@ body{margin: 0; padding: 0;}
     text-align: center;
 }
 
+/* clock style */
 .clock{
     text-align: center;
     text-shadow: 0 0 20px #0ae6ab;
@@ -23,18 +25,22 @@ body{margin: 0; padding: 0;}
     font-family: 'Play', sans-serif;
 }
 
+/* time style */
 .time{
     font-size: 100px;
 }
 
+/* date style */
 .date{
     font-size: 25px;
 }
 
+/* place style */
 .place{
     font-size: 30px;
 }
 
+/* 500pxまでの画面の場合はこっちで表示 */
 @media screen and (max-width: 500px){
     .time{
         font-size: 20vw;
