@@ -19,13 +19,11 @@ const get = () => {
     min = min < 10 ? "0" + min : min;
     sec = sec < 10 ? "0" + sec : sec;
 
-    let now_date = `${month}-${date}-${year} (${weekday})`; // mm-dd-yyyy (day)
+    let now_date = `${month}-${date}-${year}    ${weekday}`; // mm-dd-yyyy (day)
     let now_time = `${hour}:${min}:${sec}`;                 // hh:mm:ss
-    let place = `Japan Tokyo (GMT+9.00)`;
 
     document.querySelector(".date").innerText = now_date;
     document.querySelector(".time").innerText = now_time;
-    document.querySelector(".place").innerText = place;
 }
 
 setInterval(get,500);

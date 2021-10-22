@@ -28,29 +28,41 @@ body{margin: 0; padding: 0;}
 /* time style */
 .time{
     font-size: 100px;
+    padding: 10px;
+    margin: 10px;
 }
 
 /* date style */
 .date{
     font-size: 25px;
+    padding: 10px;
+    margin: 10px;
 }
 
 /* place style */
 .place{
     font-size: 30px;
+    padding: 10px;
+    margin: 10px;
 }
 
 /* 500pxまでの画面の場合はこっちで表示 */
 @media screen and (max-width: 500px){
     .time{
         font-size: 20vw;
+        padding: 5px;
+        margin: 5px;
     }
 
     .date{
         font-size: 5vw;
+        padding: 5px;
+        margin: 5px;
     }
 
     .place{
         font-size: 3vw;
+        padding: 5px;
+        margin: 5px;
     }
 }
