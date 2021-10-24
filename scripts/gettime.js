@@ -1,4 +1,4 @@
-const get = () => {
+const getTime = () => {
     let time = new Date();              // 現在日時情報を取得
     let year = time.getFullYear();      // 年を取得
     let month = time.getMonth() + 1;    // 月を取得
@@ -26,4 +26,4 @@ const get = () => {
     document.querySelector(".time").innerText = now_time;
 }
 
-setInterval(get,500);
+setInterval(getTime,500);
