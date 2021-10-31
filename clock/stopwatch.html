@@ -3,10 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/clock.css">
-        <title>Screen Clock</title>
+        <link rel="stylesheet" href="../css/stopwatch.css">
+        <title>Screen StopWatch</title>
     </head>
-
     <body>
         <nav class = "nav">
             <ul class>
@@ -16,15 +15,11 @@
                 <li><a href="#">Weather</a></li>
             </ul>
         </nav>
-        <div class = "background">
-            <div class = "clock">
-                <p class = "date"></p>
-                <p class = "time"></p>
-                <p class = "place"></p>
-            </div>
+        <div class="background">
+            <div id="stopwatch">00:00:00</div>
+            <button id="start">strat</button>
+            <button id="stop">stop</button>
+            <button id="reset">reset</button>
         </div>
-        <script src = "../scripts/gettime.js"></script>
-        <script src = "../scripts/location.js"></script>
-        <script src = "../scripts/muni.js"></script>
     </body>
 </html>
