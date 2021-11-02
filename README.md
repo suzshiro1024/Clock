@@ -10,6 +10,7 @@ This clock gets UTC+9 from class "Date" on JavaScript.
 
 
 This clock gets location from Geolocation API.
+Due to the personal nature of the information, error messages are intentionally generated, but when actually used, the error message portion of the image will read "XX City, XX Prefecture".
 
 ## StopWatch
 
