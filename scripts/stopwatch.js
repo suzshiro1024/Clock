@@ -6,10 +6,11 @@ const stopwatch = () => {
     var stop = document.getElementById('stop');             //STOPボタン
     var reset = document.getElementById('reset');           //RESETボタン
 
-    var startTime;      //開始時間
-    var lapsedTime = 0; //経過時間(ミリ秒)
-    var stopwatchId;    //Id
-    var mem = 0;        //ストップ後、リセットなしでは0秒に戻らないようにする
+    var startTime;      // 開始時間
+    var lapsedTime = 0; // 経過時間(ミリ秒)
+    var stopwatchId;    // Id
+    var mem = 0;        // ストップ後、リセットなしでは0秒に戻らないようにする
+    var flag = false;    // 計測中フラグ
 
     function transform(){
         var min = Math.floor(lapsedTime / 60000);           // 60000で割ると分が得られる
@@ -39,20 +40,26 @@ const stopwatch = () => {
 
     //STARTボタンイベント
     start.addEventListener('click',function(){
+        if(flag == false){
         startTime = Date.now();                 // 現在時刻を代入
         count();                                // 計測開始
+        flag = true;                            // フラグを立てる
+        }
     });
 
     //STOPボタンイベント
     stop.addEventListener('click',function(){
         clearTimeout(stopwatchId);              // 計測停止
-        mem += Date.now() - startTime;          // 計測再開に備えて経過時間を記憶
+        if(flag == true){
+            mem += Date.now() - startTime;      // 計測再開に備えて経過時間を記憶
+            flag = false;                       // フラグをおろす
+        }
     });
 
     //RESETボタンイベント
     reset.addEventListener('click',function(){
-        lapsedTime = 0; // 経過時間のリセット
-        mem = 0;        // メモリもリセット
+        lapsedTime = 0;                         // 経過時間のリセット
+        mem = 0;                                // メモリもリセット
         transform();
     });
 }
