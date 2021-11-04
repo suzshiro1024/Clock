@@ -2,15 +2,15 @@ const stopwatch = () => {
     'use.strict';
 
     var stopwatch = document.getElementById('stopwatch');   //時計そのもの
-    var start = document.getElementById('start');           //STARTボタン
-    var stop = document.getElementById('stop');             //STOPボタン
-    var reset = document.getElementById('reset');           //RESETボタン
+    var start     = document.getElementById('start');       //STARTボタン
+    var stop      = document.getElementById('stop');        //STOPボタン
+    var reset     = document.getElementById('reset');       //RESETボタン
 
     var startTime;      // 開始時間
     var lapsedTime = 0; // 経過時間(ミリ秒)
     var stopwatchId;    // Id
     var mem = 0;        // ストップ後、リセットなしでは0秒に戻らないようにする
-    var flag = false;    // 計測中フラグ
+    var flag = false;   // 計測中フラグ
 
     function transform(){
         var min = Math.floor(lapsedTime / 60000);           // 60000で割ると分が得られる
