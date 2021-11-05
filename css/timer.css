@@ -90,6 +90,20 @@ body{
     transform: translate(-50%, -50%)
 }
 
+.timeout{
+    animation: flash 1.5s linear infinite;
+}
+
+@keyframes flash {
+    0%,100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
 /* control unit style */
 .control{
     display: flex;
