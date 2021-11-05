@@ -17,3 +17,10 @@ Due to the personal nature of the information, error messages are intentionally 
 ![2021-11-01](https://user-images.githubusercontent.com/89633058/139833720-26ec456d-a338-4f9d-a978-25039543c5ef.png)
 
 This stopwatch is accurate to 1 millisecond.
+
+## Timer
+
+![2021-11-05 (1)](https://user-images.githubusercontent.com/89633058/140518599-7befc78c-2c5a-436c-a046-c0ab6280d3d3.png)
+![2021-11-05 (2)](https://user-images.githubusercontent.com/89633058/140518607-21c8010d-de17-452e-b02c-e69da51aa54f.png)
+
+This timer is accurate to 1 sec.
