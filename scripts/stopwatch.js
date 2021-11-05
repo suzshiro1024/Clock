@@ -58,9 +58,11 @@ const stopwatch = () => {
 
     //RESETボタンイベント
     reset.addEventListener('click',function(){
-        lapsedTime = 0;                         //経過時間のリセット
-        mem = 0;                                //メモリもリセット
-        transform();
+        if(flag == false){
+            lapsedTime = 0; //経過時間のリセット
+            mem = 0;        //メモリもリセット
+            transform();
+        }
     });
 }
 

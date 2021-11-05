@@ -73,22 +73,26 @@ const timer = () => {
 
     //RESETボタンイベント
     reset.addEventListener('click',function(){
-        time = 0;       //経過時間のリセット
-        mem = 0;        //メモリもリセット
-        transform();    //整形
+        if(flag == false){
+            time = 0;       //経過時間のリセット
+            mem = 0;        //メモリもリセット
+            transform();    //整形
+        }
     });
 
     //TIMER SETボタンイベント
     set.addEventListener('click',function(){
-        // ホップアップウィンドウに入力させる
-        // TODO ここは仮設置。あまりにも性善説的な仕様なので改善を検討中
-        var user = window.prompt("Please Set Time ( hour : min : sec )","00:00:00");
-        // 分割
-        var set  = user.split(':');
-        // ミリ秒変換して代入
-        time = Number(set[0])*3600000 + Number(set[1])*60000 + Number(set[2])*1000;
-        transform();    // 整形
-    })
+        if(flag == false){
+            // ホップアップウィンドウに入力させる
+            // TODO ここは仮設置。あまりにも性善説的な仕様なので改善を検討中
+            var user = window.prompt("Please Set Time ( hour : min : sec )","00:00:00");
+            // 分割
+            var set  = user.split(':');
+            // ミリ秒変換して代入
+            time = Number(set[0])*3600000 + Number(set[1])*60000 + Number(set[2])*1000;
+            transform();    // 整形
+        }
+    });
 }
 
 timer();
