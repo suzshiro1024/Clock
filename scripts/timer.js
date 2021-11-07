@@ -33,17 +33,16 @@ const timer = () => {
             time -= 10;
             //整形
             transform();
-            //再帰
-            count();
             if(time == 0){
                 //強制停止する
                 clearTimeout(timerId);
 
                 //時間切れになったら点滅して合図を出す
                 timeout = true;
-                var frash = document.getElementById('timer');
-                frash.classList.add("timeout");
+                timer.classList.add("timeout");
             }
+            //再帰
+            count();
         //msが飛ばないよう調整
         },10);
     }
@@ -65,8 +64,7 @@ const timer = () => {
         }
         if(timeout == true){
             //STOPを押すことで時間切れ表示のための点滅を解除
-            var frash = document.getElementById('timer');
-            frash.classList.remove('timeout');
+            timer.classList.remove('timeout');
             timeout = false;
         }
     });
