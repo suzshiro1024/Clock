@@ -1,22 +1,23 @@
 const timer = () => {
     'use strict';
 
-    var timer = document.getElementById('timer');   //タイマーそのもの
-    var start = document.getElementById('start');   //STARTボタン
-    var stop  = document.getElementById('stop');    //STOPボタン
-    var reset = document.getElementById('reset');   //RESETボタン
-    var set   = document.getElementById('timeset'); //TIMER SETボタン
+    const timer = document.getElementById('timer');   //タイマーそのもの
+    const start = document.getElementById('start');   //STARTボタン
+    const stop  = document.getElementById('stop');    //STOPボタン
+    const reset = document.getElementById('reset');   //RESETボタン
+    const set   = document.getElementById('timeset'); //TIMER SETボタン
 
-    var time = 0;           //設定時間
-    var timerId;            //Id
-    var mem = 0;            //ストップ後、リセットなしでは0秒に戻らないようにするメモリ
-    var flag = false;       //計測中フラグ
-    var timeout = false;    //時間切れ確認
+    let time = 0;           //設定時間
+    let timerId;            //Id
+    let startTime;          //開始時間
+    let mem = 0;            //ストップ後、リセットなしでは0秒に戻らないようにするメモリ
+    let flag = false;       //計測中フラグ
+    let timeout = false;    //時間切れ確認
 
     function transform(){
-        var hour= Math.floor(time / 3600000);                   //3600000で割ると時が得られる
-        var min = Math.floor(time % 3600000 / 60000);           //60000で割ると分が得られる
-        var sec = Math.floor(time % 3600000 % 60000 / 1000);    //1000で割ると秒が得られる
+        let hour= Math.floor(time / 3600000);                   //3600000で割ると時が得られる
+        let min = Math.floor(time % 3600000 / 60000);           //60000で割ると分が得られる
+        let sec = Math.floor(time % 3600000 % 60000 / 1000);    //1000で割ると秒が得られる
 
         //9 => 09という形で調整する
         hour= hour< 10 ? '0' + hour:hour;
@@ -38,18 +39,18 @@ const timer = () => {
             if(time == 0){
                 //強制停止する
                 clearTimeout(timerId);
-
                 //時間切れになったら点滅して合図を出す
                 timeout = true;
                 timer.classList.add("timeout");
             }
         //msが飛ばないよう調整
-        },10);
+        },5);
     }
 
     //STARTボタンイベント
     start.addEventListener('click',function(){
         if(flag == false && time != 0){
+            startTime = Date.now();
             count();        //計測開始
             flag = true;    //フラグを立てる
         }

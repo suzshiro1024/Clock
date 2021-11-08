@@ -1,21 +1,21 @@
 const stopwatch = () => {
     'use.strict';
 
-    var stopwatch = document.getElementById('stopwatch');   //時計そのもの
-    var start     = document.getElementById('start');       //STARTボタン
-    var stop      = document.getElementById('stop');        //STOPボタン
-    var reset     = document.getElementById('reset');       //RESETボタン
+    const stopwatch = document.getElementById('stopwatch');   //時計そのもの
+    const start     = document.getElementById('start');       //STARTボタン
+    const stop      = document.getElementById('stop');        //STOPボタン
+    const reset     = document.getElementById('reset');       //RESETボタン
 
-    var startTime;      //開始時間
-    var lapsedTime = 0; //経過時間(ミリ秒)
-    var stopwatchId;    //Id
-    var mem = 0;        //ストップ後、リセットなしでは0秒に戻らないようにする
-    var flag = false;   //計測中フラグ
+    let startTime;      //開始時間
+    let lapsedTime = 0; //経過時間(ミリ秒)
+    let stopwatchId;    //Id
+    let mem = 0;        //ストップ後、リセットなしでは0秒に戻らないようにする
+    let flag = false;   //計測中フラグ
 
     function transform(){
-        var min = Math.floor(lapsedTime / 60000);           //60000で割ると分が得られる
-        var sec = Math.floor(lapsedTime % 60000 / 1000);    //1000で割ると秒が得られる
-        var msc = Math.floor(lapsedTime % 1000);            //1000で割った余りはミリ秒
+        let min = Math.floor(lapsedTime / 60000);           //60000で割ると分が得られる
+        let sec = Math.floor(lapsedTime % 60000 / 1000);    //1000で割ると秒が得られる
+        let msc = Math.floor(lapsedTime % 1000);            //1000で割った余りはミリ秒
 
         //9 => 09という形で調整する
         min = min < 10 ? '0' + min : min;
