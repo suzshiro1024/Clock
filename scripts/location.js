@@ -22,7 +22,7 @@ const getLocation = () => {
                 //成功時に実行
                 }).then(function(data){
                     var num = data.results.muniCd;                      //json形式のデータから必要な部分を抽出
-                    var array_data = MUNI_ARRAY[num];                   //muni.jsの配列から地名情報を取得
+                    var array_data = GSI.MUNI_ARRAY[num];                   //muni.jsの配列から地名情報を取得
                     var pref_array = array_data.split(',');             //","で区切る
                     var pref = pref_array[1];                           //県名
                     var muni = pref_array[3].replace('　',' ');         //市町村名(全角空白を半角空白へ置換する)
