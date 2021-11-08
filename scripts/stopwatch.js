@@ -20,6 +20,7 @@ const stopwatch = () => {
         //9 => 09という形で調整する
         min = min < 10 ? '0' + min : min;
         sec = sec < 10 ? '0' + sec : sec;
+        //9 => 009, 90 => 090という形で調整する
         msc = msc < 10 ? '00' + msc : msc < 100 ? '0' + msc : msc;
 
         stopwatch.textContent = `${min}:${sec}:${msc}`;
