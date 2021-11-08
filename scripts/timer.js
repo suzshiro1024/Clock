@@ -1,5 +1,5 @@
 const timer = () => {
-  	'use strict';
+    'use strict';
 
   	const timer = document.getElementById('timer');   //タイマーそのもの
     const start = document.getElementById('start');   //STARTボタン
@@ -9,9 +9,8 @@ const timer = () => {
 
     let timerId;            //Id
     let remainingTime;      //残り時間
-    let startTime = 0;      //開始時間
     let endTime;            //終了時間
-    let mem = 0;            //ストップ後、リセットなしでは0秒に戻らないようにするメモリ
+    let mem;                //ストップ後、リセットなしでは0秒に戻らないようにするメモリ
     let flag = false;       //計測中フラグ
     let timeout = false;    //時間切れ確認
 
@@ -35,14 +34,14 @@ const timer = () => {
             remainingTime = endTime - Date.now();
             //整形
             transform();
-						//再帰
+			//再帰
             count();
             if(remainingTime <= 0){
                 //強制停止する
                 clearTimeout(timerId);
-								//時間を0にして表示
-								remainingTime = 0;
-								transform();
+					//時間を0にして表示
+					remainingTime = 0;
+					transform();
                 //時間切れになったら点滅して合図を出す
                 timeout = true;
                 timer.classList.add("timeout");
@@ -54,10 +53,9 @@ const timer = () => {
     //STARTボタンイベント
     start.addEventListener('click',function(){
         if(flag == false && remainingTime != 0){
-            startTime = Date.now();
-            endTime = Date.now() + remainingTime;
-            count();        //計測開始
-            flag = true;    //フラグを立てる
+            endTime = Date.now() + remainingTime;   //終了予定時間
+            count();                                //計測開始
+            flag = true;                            //フラグを立てる
         }
     });
 
