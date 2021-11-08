@@ -33,6 +33,8 @@ const timer = () => {
             time -= 10;
             //整形
             transform();
+            //再帰
+            count();
             if(time == 0){
                 //強制停止する
                 clearTimeout(timerId);
@@ -41,8 +43,6 @@ const timer = () => {
                 timeout = true;
                 timer.classList.add("timeout");
             }
-            //再帰
-            count();
         //msが飛ばないよう調整
         },10);
     }
