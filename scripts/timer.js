@@ -10,7 +10,6 @@ const timer = () => {
 	let timerId;            //Id
 	let remainingTime;      //残り時間
 	let endTime;            //終了時間
-	let mem;                //ストップ後、リセットなしでは0秒に戻らないようにするメモリ
 	let flag = false;       //計測中フラグ
 	let timeout = false;    //時間切れ確認
 
@@ -63,7 +62,6 @@ const timer = () => {
 	stop.addEventListener('click',function(){
 		clearTimeout(timerId);  	//計測停止
 		if(flag == true){
-			mem += remainingTime;	//計測再開に備えて時間を記憶
 			flag = false;       	//フラグをおろす
 		}
 		if(timeout == true){
@@ -77,7 +75,6 @@ const timer = () => {
 	reset.addEventListener('click',function(){
 		if(flag == false){
 			remainingTime = 0;	//経過時間のリセット
-			mem = 0;        		//メモリもリセット
 			transform();    		//整形
 		}
 	});
