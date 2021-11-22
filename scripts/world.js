@@ -9,7 +9,7 @@ const world = () => {
   let difference;
 
   function getTime(){
-    let time = new Date(Date.now() + difference); //GMTを取得
+    let time = new Date(Date.now() + difference); //時差考慮時刻を取得
 	  let year = time.getUTCFullYear();             //年を取得
 	  let month = time.getUTCMonth() + 1;           //月を取得
 	  let date = time.getUTCDate();                 //日を取得
@@ -35,6 +35,13 @@ const world = () => {
     date_disp.textContent = now_date;
     time_disp.textContent = now_time;
   }
+
+  window.onload = function(){
+    timezone = parseFloat(set.value);
+    console.log(timezone);
+    difference = 3600000 * timezone;
+    setInterval(getTime,500);
+  };
 
   set.addEventListener('change',function(){
     timezone = parseFloat(set.value);
