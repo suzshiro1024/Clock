@@ -1,5 +1,5 @@
 const timer = () => {
-	'use strict';
+	"use strict";
 
 	const timer = document.getElementById('timer');   //タイマーそのもの
 	const start = document.getElementById('start');   //STARTボタン

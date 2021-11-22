@@ -1,5 +1,5 @@
 const stopwatch = () => {
-	'use.strict';
+	"use strict";
 
 	const stopwatch = document.getElementById('stopwatch');   //時計そのもの
 	const start     = document.getElementById('start');       //STARTボタン
