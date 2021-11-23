@@ -9,9 +9,8 @@ A simple clock on Internet Browser such as Google Chrome, Microsoft Edge and so 
 This clock gets UTC+9 from class "Date" on JavaScript.
 
 
-This clock gets location from Geolocation API.
-Due to the personal nature of the information, error messages are intentionally generated, but when actually used, the error message portion of the image will read "XX City, XX Prefecture".
-
+This clock gets location from GeoLocation API.
+Due to the personal nature of the information, error messages are intentionally generated, but when actually used, current location is displayed.
 ## StopWatch
 
 ![2021-11-01](https://user-images.githubusercontent.com/89633058/139833720-26ec456d-a338-4f9d-a978-25039543c5ef.png)
@@ -31,7 +30,7 @@ This stopwatch is accurate to 1 millisecond.
 This timer is accurate to 1 sec.
 **TIMER SET button**: Set the time. The function is blocked when there is no measurement.
 
-**STRAT button**: Starts the countdown at the set time. The function is blocked when the time is not set or countdown is not running.
+**START button**: Starts the countdown at the set time. The function is blocked when the time is not set or countdown is not running.
 
 **STOP button**: Stops the countdown when the time is up or in the middle of the countdown. The function will be blocked when the countdown is not running.
 
