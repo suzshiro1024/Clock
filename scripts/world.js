@@ -36,18 +36,19 @@ const world = () => {
     time_disp.textContent = now_time;
   }
 
-  window.onload = function(){
+  function display(){
     timezone = parseFloat(set.value);
     console.log(timezone);
     difference = 3600000 * timezone;
     setInterval(getTime,500);
+  }
+
+  window.onload = function(){
+    display();
   };
 
   set.addEventListener('change',function(){
-    timezone = parseFloat(set.value);
-    console.log(timezone);
-    difference = 3600000 * timezone;
-    setInterval(getTime,500);
+    display();
   });
 }
 
