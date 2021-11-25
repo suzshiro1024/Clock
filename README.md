@@ -1,4 +1,4 @@
-# Clock
+# Screen Clock
 
 A simple clock on Internet Browser such as Google Chrome, Microsoft Edge and so on.
 
@@ -7,7 +7,6 @@ A simple clock on Internet Browser such as Google Chrome, Microsoft Edge and so 
 ![2021-11-02 (2)](https://user-images.githubusercontent.com/89633058/139833717-1b18efd8-0ba6-4e8f-ab5c-1057fc5e045a.png)
 
 This clock gets UTC+9 from class "Date" on JavaScript.
-
 
 This clock gets location from GeoLocation API.
 Due to the personal nature of the information, error messages are intentionally generated, but when actually used, current location is displayed.
@@ -35,3 +34,9 @@ This timer is accurate to 1 sec.
 **STOP button**: Stops the countdown when the time is up or in the middle of the countdown. The function will be blocked when the countdown is not running.
 
 **RESET button**: Resets the displayed time.
+
+## World Time Clock
+
+![2021-11-25](https://user-images.githubusercontent.com/89633058/143422453-7cd3ced5-e254-4c9c-817e-442e90d14667.png)
+
+Specify a time zone using UTC and display the time in that time zone.
