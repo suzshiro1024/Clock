@@ -43,13 +43,9 @@ const world = () => {
     setInterval(getTime,500);
   }
 
-  window.onload = function(){
-    display();
-  };
+  window.onload = display;
 
-  set.addEventListener('change',function(){
-    display();
-  });
+  set.addEventListener('change',display);
 }
 
 world();
