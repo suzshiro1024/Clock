@@ -15,9 +15,9 @@ const getLocation = () => {
 				const params = {lon: lng, lat: lat};                    //パラメータにGeolocation APIで取得した緯度経度情報を入力
 				const qs = new URLSearchParams(params);                 //URLの末尾につけられるように関数を通して変換
 
-				//fetch APIを使ってresponceオブジェクトの形で逆ジオコーディングAPIの結果を取得
-				fetch(`${url}?${qs}`).then(function(responce){
-					return responce.json();                             //json形式に変換
+				//fetch APIを使ってresponseオブジェクトの形で逆ジオコーディングAPIの結果を取得
+				fetch(`${url}?${qs}`).then(function(response){
+					return response.json();                             //json形式に変換
 
 				//成功時に実行
 				}).then(function(data){
