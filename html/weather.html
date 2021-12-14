@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/stopwatch.css" />
-    <title>Screen StopWatch</title>
+    <link rel="stylesheet" href="../css/weather.css" />
+    <script src="../jQuery.js"></script>
+    <title>Weahter</title>
   </head>
 
   <body>
@@ -18,13 +19,15 @@
       </ul>
     </nav>
     <div class="background">
-      <div id="stopwatch">00:00:000</div>
+      <div class="wheather"></div>
       <div class="control">
-        <button id="start" class="button">START</button>
-        <button id="stop" class="button">STOP</button>
-        <button id="reset" class="button">RESET</button>
+        <select id="place">
+          <option value="here" selected>Here</option>
+          <option value="tokyo">Tokyo/Japan</option>
+        </select>
       </div>
     </div>
-    <script src="../scripts/stopwatch.js"></script>
+    <script src="../scripts/weather.js"></script>
+    <script src="../API_keys.js"></script>
   </body>
 </html>
