@@ -40,3 +40,7 @@ This timer is accurate to 1 sec.
 ![2021-11-25](https://user-images.githubusercontent.com/89633058/143422453-7cd3ced5-e254-4c9c-817e-442e90d14667.png)
 
 Specify a time zone using UTC and display the time in that time zone.
+
+## Weather
+
+Under Construction.
