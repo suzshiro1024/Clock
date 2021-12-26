@@ -8,7 +8,7 @@ const timer = () => {
   const set = document.getElementById("timeset"); //TIMER SETボタン
 
   let timerId; //Id
-  let remainingTime; //残り時間
+  let remainingTime = 0; //残り時間
   let endTime; //終了時間
   let flag = false; //計測中フラグ
   let timeout = false; //時間切れ確認
