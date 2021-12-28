@@ -1,0 +1,121 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* background style */
+.background {
+  width: 100%;
+  height: 92vh;
+  background-color: #070712;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* nav style */
+.nav {
+  background-color: #070712;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8vh;
+  font-family: "Play", sans-serif;
+  font-size: 1.2rem;
+}
+
+/* nav style (ul) */
+.nav ul {
+  top: 0;
+  left: 0;
+  padding: 0px;
+  margin: 0px;
+  align-items: center;
+  height: 100%;
+  display: flex;
+}
+
+/* nav style (li) */
+.nav li {
+  flex: 1 1;
+  list-style-type: none;
+  text-shadow: 0 0 20px #0ae6ab;
+  color: rgb(0, 255, 234);
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+/* nav style (li (mouse hover)) */
+.nav li:hover {
+  background-color: gray;
+  flex: 1 1;
+  list-style-type: none;
+  text-shadow: 0 0 10px #0ae6ab;
+  color: rgb(0, 255, 234);
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+/* link in nav style */
+.nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* link in nav style (visited) */
+.nav a:visited {
+  color: inherit;
+}
+
+/* icon */
+.weather {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* control unit style */
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  text-align: center;
+  box-sizing: border-box;
+  border: solid 1px rgb(0, 255, 234);
+  top: 65%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+/* selector style */
+#place {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 200px;
+  padding: 9px 0 8px;
+  text-align: center;
+  box-sizing: border-box;
+  border: none;
+  font-family: "play", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(0, 255, 234);
+  background-color: #070712;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+}
