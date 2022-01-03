@@ -1,6 +1,5 @@
-"use strict";
-
 const weather = () => {
+  "use strict";
   const place = document.getElementById("place");
 
   //緯度と経度をここに格納しておく
@@ -29,21 +28,32 @@ const weather = () => {
       });
   }
 
-  if ((place.value = "here")) {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        //成功時に呼び出す
-        function success(position) {
-          let data = position.coords;
+  function request(){
+    if(place.value == "here"){
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          //成功時に呼び出す
+          function success(position) {
+            let data = position.coords;
 
-          lat = data.latitude;
-          lng = data.longitude;
+            lat = data.latitude;
+            lng = data.longitude;
 
-          ajaxRequest(lat, lng);
-        }
-      );
+            ajaxRequest(lat, lng);
+          }
+        );
+      }
+    }else{
+      lat = coordinate[`${place.value}`].lat;
+      lng = coordinate[`${place.value}`].lng;
+
+      ajaxRequest(lat, lng);
     }
   }
+
+  window.onload = request;
+
+  place.addEventListener("change",request);
 };
 
 weather();
