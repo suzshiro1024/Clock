@@ -1,6 +1,7 @@
 const weather = () => {
   "use strict";
   const place = document.getElementById("place");
+  const txt = document.getElementById("text");
 
   //緯度と経度をここに格納しておく
   let lat;
@@ -22,6 +23,7 @@ const weather = () => {
     })
       .done(function (data) {
         console.log(data);
+        txt.textContent = weather_id[data.list[0].weather[0].id].weather;
       })
       .fail(function () {
         console.log("ajax failed");
