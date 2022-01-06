@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/weather.css" />
-    <script src="../jQuery.js"></script>
     <title>Weather</title>
   </head>
 
@@ -20,7 +19,7 @@
     </nav>
     <div class="background">
       <div class="weather_text">現在の天気</div>
-      <div class="weather"></div>
+      <div class="weather" id="icon"></div>
       <div class="weather_text" id="text"></div>
       <div class="control">
         <select id="place">
@@ -33,5 +32,6 @@
     <script src="../scripts/weather.js"></script>
     <script src="../API_keys.js"></script>
     <script src="../coordinate.js"></script>
+    <script src="../jQuery.js"></script>
   </body>
 </html>

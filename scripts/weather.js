@@ -2,6 +2,8 @@ const weather = () => {
   "use strict";
   const place = document.getElementById("place");
   const txt = document.getElementById("text");
+  const icon = document.getElementById("icon");
+  const img_element = document.createElement("img");
 
   //緯度と経度をここに格納しておく
   let lat;
@@ -22,8 +24,11 @@ const weather = () => {
       },
     })
       .done(function (data) {
-        console.log(data);
-        txt.textContent = weather_id[data.list[0].weather[0].id].weather;
+        img_element.src = `../img/${data.list[0].weather[0].main}_frame.svg`;
+        img_element.alt = "現在地の天気";
+        img_element.height = 200;
+
+        icon.appendChild(img_element);
       })
       .fail(function () {
         console.log("ajax failed");
