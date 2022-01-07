@@ -1,7 +1,7 @@
 const weather = () => {
   "use strict";
   const place = document.getElementById("place");
-  const txt = document.getElementById("text");
+  const text = document.getElementById("text");
   const icon = document.getElementById("icon");
   const img_element = document.createElement("img");
 
@@ -29,6 +29,7 @@ const weather = () => {
         img_element.height = 200;
 
         icon.appendChild(img_element);
+        text.innerText = `${data.list[0].weather[0].main}`;
       })
       .fail(function () {
         console.log("ajax failed");
