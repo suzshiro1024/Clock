@@ -1,81 +1,83 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/world.css" />
-    <title>World Time</title>
-  </head>
 
-  <body>
-    <nav class="nav">
-      <ul class>
-        <li><a href="clock.html">Clock</a></li>
-        <li><a href="timer.html">Timer</a></li>
-        <li><a href="stopwatch.html">StopWatch</a></li>
-        <li><a href="weather.html">Weather</a></li>
-        <li><a href="world.html">WorldTime</a></li>
-      </ul>
-    </nav>
-    <div class="background">
-      <div class="clock">
-        <div id="dateId" class="date"></div>
-        <div id="timeId" class="time"></div>
-      </div>
-      <div class="control">
-        <select id="Timezone">
-          <option value="+14">+14 Kiribati</option>
-          <option value="+13">+13 Tonga,Samoa(Standard)</option>
-          <option value="+12.75">+12:45 chatham islands(NZ Standard)</option>
-          <option value="+12">+12 NZ,Russia(PETT)</option>
-          <option value="+11">+11 Australia(AEDT),Papua New Guinea</option>
-          <option value="+10.5">+10:30 Australia(ACDT)</option>
-          <option value="+10">+10 Australia(AEST),Russia(VLAT)</option>
-          <option value="+9.5">+9:30 Australia(ACST)</option>
-          <option value="+9" selected>
-            +9 Japan,Korea,Indonesia(WIT),Russia(YAKT)
-          </option>
-          <option value="+8">
-            +8 China,Taiwan,Australia(AWST),Indonesia(WITA),Russia(IRKT)
-          </option>
-          <option value="+7">+7 Indonesia(WIB),Russia(KRAT)</option>
-          <option value="+6.5">+6:30 Myanmar</option>
-          <option value="+6">+6 Bangladesh,Russia(OMST)</option>
-          <option value="+5.75">+5:45 Nepal</option>
-          <option value="+5.5">+5:30 India,Sri Lanka</option>
-          <option value="+5">+5 Uzbekistan,Russia(YEKT)</option>
-          <option value="+4.5">+4:30 Afghanistan</option>
-          <option value="4">+4 UAE,Russia(SAMT)</option>
-          <option value="+3.5">+3:30 Iran(Standard)</option>
-          <option value="+3">
-            +3 AST(Arabia),EAT(East Africa),Russia(MSK)
-          </option>
-          <option value="+2">
-            +2 CAT(Central Africa),EET(East Europe),CEST(Central Europe
-            Summer),South Africa,Russia(USZ1)
-          </option>
-          <option value="+1">
-            +1 WAT(west Africa),CET(Central Europe),WEST(West Europe Summer)
-          </option>
-          <option value="0">±0 GMT</option>
-          <option value="-1">-1 Portugal</option>
-          <option value="-2">-2 Brazil</option>
-          <option value="-2.5">-2:30 Canada(NDT)</option>
-          <option value="-3">-3 Brazil,Argentina,ADT(Atlantic Summer)</option>
-          <option value="-3.5">-3:30 Canada(NST)</option>
-          <option value="-4">-4 USA(EDT),AST(Atlantic Standard)</option>
-          <option value="-5">-5 USA(EST,CDT),CDT(Central Summer)</option>
-          <option value="-6">-6 USA(CST,MDT),CST(Central Standard)</option>
-          <option value="-7">-7 USA(MST,PDT)</option>
-          <option value="-8">-8 USA(PST,AKDT)</option>
-          <option value="-9">-9 USA(AKST,HADT)</option>
-          <option value="-9.5">-9:30</option>
-          <option value="-10">-10 USA(HAST)</option>
-          <option value="-11">-11 American Samoa</option>
-          <option value="-12">-12</option>
-        </select>
-      </div>
-    </div>
-    <script src="../scripts/world.js"></script>
-  </body>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../css/world.css" />
+	<title>World Time</title>
+</head>
+
+<body>
+	<nav class="nav">
+		<ul class>
+			<li><a href="clock.html">Clock</a></li>
+			<li><a href="timer.html">Timer</a></li>
+			<li><a href="stopwatch.html">StopWatch</a></li>
+			<li><a href="weather.html">Weather</a></li>
+			<li><a href="world.html">WorldTime</a></li>
+		</ul>
+	</nav>
+	<div class="background">
+		<div class="clock">
+			<div id="dateId" class="date"></div>
+			<div id="timeId" class="time"></div>
+		</div>
+		<div class="control">
+			<select id="Timezone">
+				<option value="+14">+14 Kiribati</option>
+				<option value="+13">+13 Tonga,Samoa(Standard)</option>
+				<option value="+12.75">+12:45 chatham islands(NZ Standard)</option>
+				<option value="+12">+12 NZ,Russia(PETT)</option>
+				<option value="+11">+11 Australia(AEDT),Papua New Guinea</option>
+				<option value="+10.5">+10:30 Australia(ACDT)</option>
+				<option value="+10">+10 Australia(AEST),Russia(VLAT)</option>
+				<option value="+9.5">+9:30 Australia(ACST)</option>
+				<option value="+9" selected>
+					+9 Japan,Korea,Indonesia(WIT),Russia(YAKT)
+				</option>
+				<option value="+8">
+					+8 China,Taiwan,Australia(AWST),Indonesia(WITA),Russia(IRKT)
+				</option>
+				<option value="+7">+7 Indonesia(WIB),Russia(KRAT)</option>
+				<option value="+6.5">+6:30 Myanmar</option>
+				<option value="+6">+6 Bangladesh,Russia(OMST)</option>
+				<option value="+5.75">+5:45 Nepal</option>
+				<option value="+5.5">+5:30 India,Sri Lanka</option>
+				<option value="+5">+5 Uzbekistan,Russia(YEKT)</option>
+				<option value="+4.5">+4:30 Afghanistan</option>
+				<option value="4">+4 UAE,Russia(SAMT)</option>
+				<option value="+3.5">+3:30 Iran(Standard)</option>
+				<option value="+3">
+					+3 AST(Arabia),EAT(East Africa),Russia(MSK)
+				</option>
+				<option value="+2">
+					+2 CAT(Central Africa),EET(East Europe),CEST(Central Europe
+					Summer),South Africa,Russia(USZ1)
+				</option>
+				<option value="+1">
+					+1 WAT(west Africa),CET(Central Europe),WEST(West Europe Summer)
+				</option>
+				<option value="0">±0 GMT</option>
+				<option value="-1">-1 Portugal</option>
+				<option value="-2">-2 Brazil</option>
+				<option value="-2.5">-2:30 Canada(NDT)</option>
+				<option value="-3">-3 Brazil,Argentina,ADT(Atlantic Summer)</option>
+				<option value="-3.5">-3:30 Canada(NST)</option>
+				<option value="-4">-4 USA(EDT),AST(Atlantic Standard)</option>
+				<option value="-5">-5 USA(EST,CDT),CDT(Central Summer)</option>
+				<option value="-6">-6 USA(CST,MDT),CST(Central Standard)</option>
+				<option value="-7">-7 USA(MST,PDT)</option>
+				<option value="-8">-8 USA(PST,AKDT)</option>
+				<option value="-9">-9 USA(AKST,HADT)</option>
+				<option value="-9.5">-9:30</option>
+				<option value="-10">-10 USA(HAST)</option>
+				<option value="-11">-11 American Samoa</option>
+				<option value="-12">-12</option>
+			</select>
+		</div>
+	</div>
+	<script src="../scripts/world.js"></script>
+</body>
+
 </html>
